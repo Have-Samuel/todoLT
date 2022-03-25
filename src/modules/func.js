@@ -47,7 +47,6 @@ const addTask = () => {
     localStorage.setItem('listItem', JSON.stringify(tasks));
     form.elements.item.value = '';
     window.location.reload();
-    
   });
 };
 
@@ -72,7 +71,9 @@ const updateTask = (index, value) => {
 };
 
 const status = (index, type) => {
-  task[index].completed = type
+  task[index].completed = type;
 };
 
-export { addTask, removeTask, updateTask, status, removecompletedTask };
+export {
+  addTask, removeTask, updateTask, status, removecompletedTask,
+};

@@ -4,7 +4,6 @@ import { clearCompletedTasks, markTask, selectAtask } from './modules/interact.j
 
 const form = document.querySelector('.item-container__list-content');
 
-
 const checkbox = document.querySelectorAll('input[type=checkbox]');
 
 const checkMark = (input) => {
@@ -17,8 +16,7 @@ const checkMark = (input) => {
 
 checkbox.forEach((e) => checkMark(e));
 
-
-addTask();
+addTask(form);
 
 selectAtask();
 
