@@ -56,6 +56,5 @@ const clearCompletedTasks = () => {
 };
 
 export {
-    markTask, selectAtask, clearCompletedTasks,
-  };
-  
+      markTask, selectAtask, clearCompletedTasks,
+};
