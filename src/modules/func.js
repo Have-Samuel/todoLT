@@ -47,6 +47,7 @@ const addTask = () => {
     localStorage.setItem('listItem', JSON.stringify(tasks));
     form.elements.item.value = '';
     window.location.reload();
+    form.focus()
   });
 };
 
@@ -66,12 +67,12 @@ const removecompletedTask = () => {
 removeBtn.addEventListener('click', removecompletedTask());
 
 const updateTask = (index, value) => {
-  task[index].destination = value;
+  tasks[index].destination = value;
   window.localStorage.setItem('listItem', JSON.stringify(tasks));
 };
 
 const status = (index, type) => {
-  task[index].completed = type;
+  tasks[index].completed = type;
 };
 
 export {

@@ -4,7 +4,8 @@ import {
 
 const checkbox = document.querySelectorAll('input[type="checkbox"]');
 const taskName = document.querySelectorAll('.task-name');
-const deleteList = document.querySelectorAll('.item-container__remove-all');
+
+const icon = document.querySelectorAll('.fa-ellipsis-vertical');
 
 const removeHighLight = () => {
   taskName.forEach((e) => {
@@ -36,7 +37,7 @@ const selectAtask = () => {
       taskName[k].parentElement.classList.add('list-highlight');
       taskName[k].nextElementSibling.classList.add('icon-delete');
 
-      deleteList[k].addEventListener('click', () => {
+      icon[k].addEventListener('click', () => {
         removeTask(k);
         window.location.reload();
       });

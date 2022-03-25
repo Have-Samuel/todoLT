@@ -16,6 +16,9 @@ const checkMark = (input) => {
 
 checkbox.forEach((e) => checkMark(e));
 
+form.querySelector('input').focus();
+console.log('Hey', form.querySelector('input'));
+
 addTask(form);
 
 selectAtask();
