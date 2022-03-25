@@ -51,7 +51,6 @@ const addTask = () => {
   });
 };
 
-
 const removeTask = (index) => {
   tasks.splice(index, 1);
   updateIndex();
