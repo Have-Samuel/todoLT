@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(187, 180, 177);
+}
+
+.item-container {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #cecece;
+  margin-top: 4rem;
+  margin-left: 22rem;
+  background-color: #f3f3f3;
+  padding: 1rem;
+  margin-right: 22rem;
+  filter: drop-shadow(3px 3px 2px #ccc);
+}
+
+.item-container__title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.item-container__list-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type='text'] {
+  width: 100%;
+  padding: 0.3rem 0;
+}
+
+.icon-turn {
+  margin-left: 0.5rem;
+  transform: rotate(90deg);
+}
+
+.item-container__items {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.list-container__items--item {
+  display: flex;
+  justify-content: flex-end;
+  gap: 26%;
+  border: 1px solid grey;
+  margin: 0.2rem -2rem;
+  padding: 0.4rem;
+  align-items: center;
+  filter: drop-shadow(3px 3px 2px #ccc);
+}
+
+.task-name {
+  margin-left: 2rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.task-name:focus {
+  cursor: default;
+}
+
+.icon-delete {
+  position: relative;
+}
+
+.icon-delete::after {
+  content: '\f2ed';
+  position: absolute;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  color: #808080;
+  margin-bottom: 0.7rem;
+}
+
+.icon-delete::before {
+  display: none;
+}
+
+.fa-ellipsis-vertical::after {
+  display: block;
+}
+
+i {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.fa-ellipsis-vertical {
+  justify-content: flex-start;
+  padding: 0.2rem;
+  color: rgb(173, 168, 168);
+}
+
+.fa-ellipsis-vertical:hover {
+  color: #808080;
+  cursor: pointer;
+}
+
+.fa-solid {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.item-container__remove-all {
+  padding: 1rem;
+  background-color: #f8f4f4;
+  border: 1px solid #808080;
+  font-size: 16px;
+  text-decoration: underline;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+.list-highlight {
+  background-color: #ebddc2;
+}
+
+.input-after::after {
+  background-color: #ece2ce;
+}

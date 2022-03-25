@@ -2,55 +2,36 @@
 
 # Project Name
 
-> Description the project.
-
+> TodoList.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML
+- CSS
+- JavaScript
+- Webpack
+- Git & Github
 
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
-
+## Live Link [Demo] (https://have-samuel.github.io/todoLT/)
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
+1. git clone git@github.com:Have-Samuel/todoList.git
+2. In your terminal, move the location you want to clone the project.
+3. cd to the repo.
+4. Get VScode and Install the Linters
+5. And then Start working on your project
+6. In the terminal still typo npm start to view the page
 
 ## Authors
 
-👤 **Author1**
+👤 **Have Samuel**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/Have-Samuel)
+- Twitter: [@twitterhandle](https://twitter.com/home)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/feed)
 
 ## 🤝 Contributing
 
