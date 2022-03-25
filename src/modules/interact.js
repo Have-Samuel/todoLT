@@ -4,7 +4,6 @@ import {
 
 const checkbox = document.querySelectorAll('input[type="checkbox"]');
 const taskName = document.querySelectorAll('.task-name');
-
 const icon = document.querySelectorAll('.fa-ellipsis-vertical');
 
 const removeHighLight = () => {

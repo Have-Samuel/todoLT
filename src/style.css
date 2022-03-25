@@ -23,6 +23,7 @@ body {
 .item-container__title {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
 .title {
@@ -85,6 +86,16 @@ input[type='text'] {
   left: -50%;
   width: 100%;
   height: 100%;
+  color: #808080;
+  margin-bottom: 0.7rem;
+}
+
+.icon-delete::before {
+  display: none;
+}
+
+.fa-ellipsis-vertical::after {
+  display: block;
 }
 
 i {
@@ -93,9 +104,14 @@ i {
 }
 
 .fa-ellipsis-vertical {
-  display: flex;
   justify-content: flex-start;
   padding: 0.2rem;
+  color: rgb(173, 168, 168);
+}
+
+.fa-ellipsis-vertical:hover {
+  color: #808080;
+  cursor: pointer;
 }
 
 .fa-solid {
@@ -109,6 +125,7 @@ i {
   background-color: #f8f4f4;
   border: 1px solid #808080;
   font-size: 16px;
+  text-decoration: underline;
 }
 
 .checked {

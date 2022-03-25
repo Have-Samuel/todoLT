@@ -51,11 +51,13 @@ const addTask = () => {
   });
 };
 
+
 const removeTask = (index) => {
   tasks.splice(index, 1);
   updateIndex();
   window.localStorage.setItem('listItem', JSON.stringify(tasks));
 };
+
 const removeBtn = document.querySelector('.item-container__remove-all');
 const removecompletedTask = () => {
   for (let k = 0; k < tasks.length; k += 1) {
@@ -67,7 +69,7 @@ const removecompletedTask = () => {
 removeBtn.addEventListener('click', removecompletedTask());
 
 const updateTask = (index, value) => {
-  tasks[index].destination = value;
+  tasks[index].description = value;
   window.localStorage.setItem('listItem', JSON.stringify(tasks));
 };
 
