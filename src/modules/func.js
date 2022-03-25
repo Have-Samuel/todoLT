@@ -47,7 +47,7 @@ const addTask = () => {
     localStorage.setItem('listItem', JSON.stringify(tasks));
     form.elements.item.value = '';
     window.location.reload();
-    form.focus()
+    form.focus();
   });
 };
 
