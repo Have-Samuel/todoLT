@@ -56,7 +56,7 @@ input[type='text'] {
   flex-direction: column;
   list-style: none;
   /* margin: 1rem; */
-  /* padding: 0 rem; */
+  padding: 0 rem;
   /* border-bottom: solid #ccc 1px; */
 }
 
