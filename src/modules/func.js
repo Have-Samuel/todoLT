@@ -1,7 +1,7 @@
 const listContainer = document.querySelector('.item-container__items');
 const form = document.querySelector('.item-container__list-content');
 
-const tasks = [];
+let tasks = [];
 
 const storage = localStorage.getItem('listItem');
 tasks = storage === null ? [] : JSON.parse(storage);

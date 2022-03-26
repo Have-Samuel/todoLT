@@ -1,5 +1,5 @@
 import {
-  status, removeTask, updateTask, removecompletedTask, tasks,
+  status, removeTask, updateTask, removecompletedTask,
 } from './func.js';
 
 const checkbox = document.querySelectorAll('input[type="checkbox"]');
