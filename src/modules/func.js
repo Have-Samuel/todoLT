@@ -1,7 +1,7 @@
 const listContainer = document.querySelector('.item-container__items');
 const form = document.querySelector('.item-container__list-content');
 
-let tasks = [];
+export let tasks = [];
 
 const storage = localStorage.getItem('listItem');
 tasks = storage === null ? [] : JSON.parse(storage);
@@ -59,10 +59,11 @@ const removeTask = (index) => {
 
 const removeBtn = document.querySelector('.item-container__remove-all');
 const removecompletedTask = () => {
-  for (let k = 0; k < tasks.length; k += 1) {
-    if (tasks[k].completed === true) removeTask(k);
-  }
+  
+  let newList = tasks.filter((element) => element.completed === false);
+  tasks = newList;
   updateIndex();
+  window.localStorage.setItem('listItem', JSON.stringify(tasks));
 };
 
 removeBtn.addEventListener('click', removecompletedTask());

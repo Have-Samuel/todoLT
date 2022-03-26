@@ -14,7 +14,7 @@ body {
   border: 2px solid #cecece;
   margin-top: 4rem;
   margin-left: 22rem;
-  background-color: #f3f3f3;
+  background-color: #fff;
   padding: 1rem;
   margin-right: 22rem;
   filter: drop-shadow(3px 3px 2px #ccc);
@@ -23,7 +23,9 @@ body {
 .item-container__title {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: solid #ccc 1px;
+  padding: 1rem;
 }
 
 .title {
@@ -33,11 +35,15 @@ body {
 .item-container__list-content {
   display: flex;
   justify-content: space-between;
+  /* padding: 0.5rem; */
 }
 
 input[type='text'] {
   width: 100%;
-  padding: 0.3rem 0;
+  padding: 0.13rem 0;
+  border: none;
+  border-bottom: solid rgb(209, 208, 208) 1px;
+  padding-left: 0.3rem;
 }
 
 .icon-turn {
@@ -49,22 +55,25 @@ input[type='text'] {
   display: flex;
   flex-direction: column;
   list-style: none;
-  margin: 1rem;
-  padding: 1rem;
+  /* margin: 1rem; */
+  /* padding: 0 rem; */
+  /* border-bottom: solid #ccc 1px; */
 }
 
 .list-container__items--item {
   display: flex;
   justify-content: flex-end;
   gap: 26%;
-  border: 1px solid grey;
-  margin: 0.2rem -2rem;
+  border: none;
+  /* margin: 0.2rem -1rem; */
+  border-bottom: solid rgb(209, 208, 208) 1px;
   padding: 0.4rem;
   align-items: center;
   filter: drop-shadow(3px 3px 2px #ccc);
 }
 
 .task-name {
+  padding: 1rem;
   margin-left: 2rem;
   outline: none;
   border: none;
@@ -117,13 +126,13 @@ i {
 .fa-solid {
   display: flex;
   align-items: center;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
 
 .item-container__remove-all {
   padding: 1rem;
-  background-color: #f8f4f4;
-  border: 1px solid #808080;
+  background-color: #fff;
+  border: none;
   font-size: 16px;
   text-decoration: underline;
 }
