@@ -75,8 +75,9 @@ const updateTask = (index, value) => {
 
 const status = (index, type) => {
   tasks[index].completed = type;
+  window.localStorage.setItem('listItem', JSON.stringify(tasks));
 };
 
 export {
-  addTask, removeTask, updateTask, status, removecompletedTask, tasks,
+  addTask, removeTask, updateTask, status, removecompletedTask,
 };
