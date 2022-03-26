@@ -6,14 +6,7 @@ let tasks = [];
 const storage = localStorage.getItem('listItem');
 tasks = storage === null ? [] : JSON.parse(storage);
 
-const task = {
-  description: '',
-  completed: false,
-  index: 0,
-};
-
 const displayTask = () => {
-  tasks.sort((a, b) => a.index - b.index);
   tasks.forEach((e) => {
     const li = document.createElement('li');
     const input = document.createElement('input');
@@ -22,6 +15,7 @@ const displayTask = () => {
     i.classList.add('icon', 'fa-solid', 'fa-ellipsis-vertical');
 
     input.type = 'checkbox';
+    input.setAttribute('id', e.index);
     li.className = 'list-container__items--item';
     span.className = 'task-name';
     span.value = e.description;
@@ -34,15 +28,18 @@ displayTask();
 
 const updateIndex = () => {
   for (let k = 0; k < tasks.length; k += 1) {
-    tasks[k].index = 1;
+    tasks[k].index = k + 1;
   }
 };
 
 const addTask = () => {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
-    task.description = form.elements[0].value;
-    task.index = tasks.length;
+    const task = {
+      description: form.elements[0].value,
+      completed: false,
+      index: tasks.length + 1,
+    };
     tasks.push(task);
     localStorage.setItem('listItem', JSON.stringify(tasks));
     form.elements.item.value = '';
@@ -59,10 +56,10 @@ const removeTask = (index) => {
 
 const removeBtn = document.querySelector('.item-container__remove-all');
 const removecompletedTask = () => {
-  for (let k = 0; k < tasks.length; k += 1) {
-    if (tasks[k].completed === true) removeTask(k);
-  }
+  const newList = tasks.filter((element) => element.completed === false);
+  tasks = newList;
   updateIndex();
+  window.localStorage.setItem('listItem', JSON.stringify(tasks));
 };
 
 removeBtn.addEventListener('click', removecompletedTask());
@@ -74,6 +71,7 @@ const updateTask = (index, value) => {
 
 const status = (index, type) => {
   tasks[index].completed = type;
+  window.localStorage.setItem('listItem', JSON.stringify(tasks));
 };
 
 export {

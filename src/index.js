@@ -18,10 +18,10 @@ checkbox.forEach((e) => checkMark(e));
 
 form.querySelector('input').focus();
 
-addTask(form);
-
 selectAtask();
 
 markTask();
 
 clearCompletedTasks();
+
+addTask(form);
