@@ -9,11 +9,11 @@ tasks = storage === null ? [] : JSON.parse(storage);
 const task = {
   description: '',
   completed: false,
-  index: 0,
+  index: null,
 };
 
 const displayTask = () => {
-  tasks.sort((a, b) => a.index - b.index);
+  // tasks.sort((a, b) => a.index - b.index);
   tasks.forEach((e) => {
     const li = document.createElement('li');
     const input = document.createElement('input');
@@ -35,19 +35,24 @@ displayTask();
 
 const updateIndex = () => {
   for (let k = 0; k < tasks.length; k += 1) {
-    tasks[k].index = k;
+    tasks[k].index = k +1;
   }
 };
 
 const addTask = () => {
   form.addEventListener('submit', (event) => {
-    task.description = form.elements[0].value;
-    task.index = tasks.length;
-    tasks.push(task);
+    event.preventDefault();
+    const task_ = {
+      description: form.elements[0].value,
+      completed: false,
+      index: tasks.length + 1,
+    };
+    // task.description = form.elements[0].value;
+    // task.index = tasks.length + 1;
+    tasks.push(task_);
     localStorage.setItem('listItem', JSON.stringify(tasks));
     form.elements.item.value = '';
     window.location.reload();
-    event.preventDefault();
     form.focus();
   });
 };
