@@ -59,8 +59,7 @@ const removeTask = (index) => {
 
 const removeBtn = document.querySelector('.item-container__remove-all');
 const removecompletedTask = () => {
-  
-  let newList = tasks.filter((element) => element.completed === false);
+  const newList = tasks.filter((element) => element.completed === false);
   tasks = newList;
   updateIndex();
   window.localStorage.setItem('listItem', JSON.stringify(tasks));

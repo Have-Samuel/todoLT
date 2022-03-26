@@ -35,7 +35,6 @@ body {
 .item-container__list-content {
   display: flex;
   justify-content: space-between;
-  /* padding: 0.5rem; */
 }
 
 input[type='text'] {
@@ -55,9 +54,6 @@ input[type='text'] {
   display: flex;
   flex-direction: column;
   list-style: none;
-  /* margin: 1rem; */
-  padding: 0 rem;
-  /* border-bottom: solid #ccc 1px; */
 }
 
 .list-container__items--item {
@@ -65,7 +61,6 @@ input[type='text'] {
   justify-content: flex-end;
   gap: 26%;
   border: none;
-  /* margin: 0.2rem -1rem; */
   border-bottom: solid rgb(209, 208, 208) 1px;
   padding: 0.4rem;
   align-items: center;
