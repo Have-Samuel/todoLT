@@ -16,7 +16,6 @@ const removeHighLight = () => {
 const markTask = () => {
   for (let k = 0; k < checkbox.length; k += 1) {
     checkbox[k].addEventListener('change', (e) => {
-      const id=document.getElementById(e.target.getAttribute('id')).getAttribute('id');
       if (checkbox[k].checked) {
         checkbox[k].classList.add('input-after');
         checkbox[k].nextElementSibling.classList.add('checked');
@@ -59,5 +58,3 @@ const clearCompletedTasks = () => {
 export {
   markTask, selectAtask, clearCompletedTasks,
 };
-
-

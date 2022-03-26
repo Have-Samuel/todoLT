@@ -35,7 +35,7 @@ displayTask();
 
 const updateIndex = () => {
   for (let k = 0; k < tasks.length; k += 1) {
-    tasks[k].index = k += 0;
+    tasks[k].index = k;
   }
 };
 
