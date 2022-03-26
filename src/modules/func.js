@@ -22,6 +22,7 @@ const displayTask = () => {
     i.classList.add('icon', 'fa-solid', 'fa-ellipsis-vertical');
 
     input.type = 'checkbox';
+    input.setAttribute('id', e.index)
     li.className = 'list-container__items--item';
     span.className = 'task-name';
     span.value = e.description;
@@ -34,19 +35,19 @@ displayTask();
 
 const updateIndex = () => {
   for (let k = 0; k < tasks.length; k += 1) {
-    tasks[k].index = 1;
+    tasks[k].index = k += 0;
   }
 };
 
 const addTask = () => {
   form.addEventListener('submit', (event) => {
-    event.preventDefault();
     task.description = form.elements[0].value;
     task.index = tasks.length;
     tasks.push(task);
     localStorage.setItem('listItem', JSON.stringify(tasks));
     form.elements.item.value = '';
     window.location.reload();
+    event.preventDefault();
     form.focus();
   });
 };
@@ -77,5 +78,5 @@ const status = (index, type) => {
 };
 
 export {
-  addTask, removeTask, updateTask, status, removecompletedTask,
+  addTask, removeTask, updateTask, status, removecompletedTask, tasks,
 };

@@ -1,5 +1,5 @@
 import {
-  status, removeTask, updateTask, removecompletedTask,
+  status, removeTask, updateTask, removecompletedTask, tasks
 } from './func.js';
 
 const checkbox = document.querySelectorAll('input[type="checkbox"]');
@@ -15,7 +15,9 @@ const removeHighLight = () => {
 
 const markTask = () => {
   for (let k = 0; k < checkbox.length; k += 1) {
-    checkbox[k].addEventListener('change', () => {
+    checkbox[k].addEventListener('change', (e) => {
+    
+      console.log(tasks); 
       if (checkbox[k].checked) {
         checkbox[k].classList.add('input-after');
         checkbox[k].nextElementSibling.classList.add('checked');

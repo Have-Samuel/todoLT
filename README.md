@@ -23,7 +23,8 @@ To get a local copy up and running follow these simple example steps.
 3. cd to the repo.
 4. Get VScode and Install the Linters
 5. And then Start working on your project
-6. In the terminal still typo npm start to view the page
+6. 'npm install' installs the webpack and the functional files 
+6. In the terminal still type npm start to view the page
 
 ## Authors
 
