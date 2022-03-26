@@ -12,8 +12,6 @@
 - Webpack
 - Git & Github
 
-## Live Link [Demo] (https://have-samuel.github.io/todoLT/)
-
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.

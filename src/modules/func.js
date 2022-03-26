@@ -1,7 +1,7 @@
 const listContainer = document.querySelector('.item-container__items');
 const form = document.querySelector('.item-container__list-content');
 
-let tasks = [];
+const tasks = [];
 
 const storage = localStorage.getItem('listItem');
 tasks = storage === null ? [] : JSON.parse(storage);
@@ -22,7 +22,7 @@ const displayTask = () => {
     i.classList.add('icon', 'fa-solid', 'fa-ellipsis-vertical');
 
     input.type = 'checkbox';
-    input.setAttribute('id', e.index)
+    input.setAttribute('id', e.index);
     li.className = 'list-container__items--item';
     span.className = 'task-name';
     span.value = e.description;
