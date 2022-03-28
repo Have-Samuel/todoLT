@@ -23,6 +23,8 @@ To get a local copy up and running follow these simple example steps.
 6. 'npm install' installs the webpack and the functional files 
 7. In the terminal still type npm start to view the page
 
+## Live Demo [link] (https://github.com/Have-Samuel/todoLT)
+
 ## Author
 
 👤 **Have Samuel**
