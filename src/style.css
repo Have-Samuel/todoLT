@@ -118,6 +118,7 @@ i {
   display: flex;
   align-items: center;
   margin-right: 1rem;
+  margin-left: auto;
 }
 
 .item-container__remove-all {
